@@ -1,0 +1,197 @@
+'''
+from tkinter import*
+window=Tk()
+window.geometry("500x500")
+checkvar1=IntVar()
+checkvar2=IntVar()
+
+bt1=Checkbutton(window,text="Male",variable=checkvar1,onvalue=1,offvalue=0,height=3,width=12)
+
+bt2=Checkbutton(window,text="Female",variable=checkvar2,onvalue=1,offvalue=0,height=3,width=12)
+
+bt1.pack()
+bt2.pack()
+window.mainloop()
+'''
+'''
+from tkinter import*
+window=Tk()
+window.geometry("500x500")
+
+leftframe=Frame(window)
+leftframe.pack(side=LEFT)
+
+rightframe=Frame(window)
+rightframe.pack(side=RIGHT)
+
+bt1=Button(leftframe,text="Button1",fg="Red")
+bt1.pack(side=LEFT)
+
+bt2=Button(rightframe,text="Button2",fg="Blue")
+bt2.pack(side=RIGHT)
+
+window.mainloop()
+'''
+'''
+from tkinter import*
+window=Tk()
+window.geometry()
+window.title("Frames")
+frame1=Frame(window,height=105,bg="pink")
+frame1.pack(fill=X)
+
+frame2=Frame(window,height=55,bg="yellow")
+frame2.pack(fill=X)
+
+frame1=Frame(window,height=28,bg="green")
+frame1.pack(fill=X)
+
+
+window.mainloop()
+'''
+#Entry widget
+#Label widget
+'''
+from tkinter import*
+window=Tk()
+window.geometry("500x500")
+name=Label(window,text="User Name")
+name.place(x=40,y=60)
+
+password=Label(window,text="Password")
+password.place(x=40,y=100)
+
+e1=Entry(window,width=25).place(x=112,y=60)
+e2=Entry(window,width=25).place(x=112,y=100)
+
+
+button1=Button(window,text="Submit").place(x=40,y=130)
+window.mainloop()
+'''
+#label frame
+'''
+from tkinter import*
+
+window=Tk()
+window.geometry("500x500")
+labelframe1=LabelFrame(window,text="Home Address")
+labelframe1.pack(fill="both",expand="yes")
+
+label1=Label(labelframe1,text="Enter your Home Address")
+label1.pack()
+
+labelframe2=LabelFrame(window,text="College Address")
+labelframe2.pack(fill="both",expand="yes")
+
+label2=Label(labelframe2,text="Enter your College Address")
+label2.pack()
+
+window.mainloop()
+
+'''
+import tkinter as tk  
+from functools import partial  
+   
+   
+def call_result(label_result, n1, n2):  
+    num1 = (n1.get())  
+    num2 = (n2.get())  
+    result = int(num1)+int(num2)  
+    label_result.config(text="Result = %d" % result)  
+    return  
+   
+window = tk.Tk()  
+window.geometry('400x200+100+200')  
+  
+window.title('Calculator')  
+   
+number1 = tk.StringVar()  
+number2 = tk.StringVar()  
+  
+labelNum1 = tk.Label(window, text="A").grid(row=3, column=3)  
+  
+labelNum2 = tk.Label(window, text="B").grid(row=4, column=3)  
+  
+labelResult = tk.Label(window)  
+  
+labelResult.grid(row=7, column=2)  
+  
+entryNum1 = tk.Entry(window, textvariable=number1).grid(row=3, column=6)  
+  
+entryNum2 = tk.Entry(window, textvariable=number2).grid(row=4, column=6)  
+  
+call_result = partial(call_result, labelResult, number1, number2)  
+  
+buttonCal = tk.Button(window, text="Calculate", command=call_result).grid(row=5, column=3)  
+  
+window.mainloop()  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
